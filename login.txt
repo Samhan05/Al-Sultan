@@ -1,0 +1,5 @@
+Customer UserName: user@gmail.com
+Customer Password: user123
+
+Admin UserName: sultan@gmail.com
+Admin Password: 1234

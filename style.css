@@ -1,0 +1,397 @@
+ :root {
+        --gold: #d4af37;         
+        --dark-gold: #aa8c2c;    
+        --dark-bg: #050505; 
+        --card-bg: #111111; 
+        --light-text: #f8f9fa;
+        --glass: rgba(255, 255, 255, 0.03);
+    }
+
+    body {
+        font-family: 'Lato', sans-serif;
+        background-color: var(--dark-bg);
+        color: var(--light-text);
+        overflow-x: hidden;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        background: radial-gradient(circle at 50% -20%, #1a1a1a 0%, #050505 80%);
+    }
+
+
+    h1, h2, h3, h4, h5, .navbar-brand {
+        font-family: 'Cinzel', serif;
+        letter-spacing: 2px;
+    }
+
+
+    .card {
+        background: var(--card-bg) !important;
+        border: 1px solid rgba(212, 175, 55, 0.15) !important;
+        backdrop-filter: blur(10px);
+        transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    }
+
+    .card:hover {
+        transition: all 0.3s ease;
+        border-color: var(--gold) !important;
+        box-shadow: 0 15px 45px rgba(212, 175, 55, 0.1);
+    }
+
+
+    .navbar {
+        background-color: rgba(5, 5, 5, 0.9) !important;
+       backdrop-filter: blur(10px);
+        padding: 1.2rem 0;
+        border-bottom: 1px solid var(--dark-gold);
+        transition: all 0.3s ease;
+        
+    }
+
+    .navbar-brand {
+        font-size: 1.6rem;
+        color: var(--gold) !important;
+        font-weight: 700;
+        text-shadow: 0 0 15px rgba(212, 175, 55, 0.3);
+    }
+.btn-outline-gold {
+    color: #ffffff !important; /* Forces the text to be white */
+    border: 1px solid var(--gold) !important; /* Keeps the luxury gold border */
+    background: transparent;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+    .btn-gold {
+        background: linear-gradient(45deg, var(--dark-gold), var(--gold));
+        color: white !important;
+        border: none;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-weight: 700;
+        padding: 10px 25px;
+        box-shadow: 0 4px 15px rgba(212, 175, 55, 0.2);
+        transition: all 0.3s ease;
+    }
+
+    .btn-gold:hover {
+        transform: scale(1.05);
+        box-shadow: 0 6px 25px rgba(212, 175, 55, 0.4);
+        filter: brightness(1.1);
+        background: var(--gold) !important; 
+    color: #000000 !important;
+    border-color: var(--gold) !important;
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.4);
+    }
+            .nav-link {
+
+            color: rgba(255,255,255,0.8) !important;
+
+            margin-left: 1.2rem;
+
+            font-weight: 400;
+
+            text-transform: uppercase;
+
+            font-size: 0.85rem;
+
+            letter-spacing: 1.5px;
+
+            transition: color 0.3s ease;
+
+            position: relative;
+
+        }
+
+
+
+        .nav-link:hover, .nav-link.active {
+
+            color: var(--gold) !important;
+
+        }
+
+
+
+        .nav-link::after {
+
+            content: '';
+
+            position: absolute;
+
+            width: 0;
+
+            height: 2px;
+
+            bottom: -5px;
+
+            left: 0;
+
+            background-color: var(--gold);
+
+            transition: width 0.3s ease;
+
+        }
+
+
+
+        .nav-link:hover::after, .nav-link.active::after {
+
+            width: 100%;
+
+        }
+    .table {
+        color: var(--light-text) !important;
+        border-color: rgba(212, 175, 55, 0.1);
+    }
+
+    .table-hover tbody tr:hover {
+        background-color: rgba(212, 175, 55, 0.05) !important;
+        color: var(--gold) !important;
+    }
+
+    .form-control {
+        background-color: #151515 !important;
+        border: 1px solid #333 !important;
+        color: white !important;
+    }
+
+    .form-control:focus {
+        border-color: var(--gold) !important;
+        box-shadow: 0 0 10px rgba(212, 175, 55, 0.2) !important;
+    }
+
+    .letter-spacing-2 { letter-spacing: 2px; }
+
+    .text-color {
+    color: rgb(255, 255, 255);
+    }
+    .form-control::placeholder {
+    color: rgba(255, 255, 255, 0.8) !important;
+    opacity: 1; 
+}
+
+
+textarea.form-control::placeholder {
+    color: #ffffff !important;
+}
+ .page-header {
+        position: relative;
+        height: 60vh;
+        /* High quality luxury garage/showroom image */
+        background-image: url('uploads/showroom.png');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed; /* Parallax effect */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+    }
+
+    .page-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.6);
+    }
+
+    .header-content {
+        position: relative;
+        z-index: 2;
+        text-align: center;
+    }
+
+    .team-member img {
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        border: 3px solid var(--gold, #d4af37);
+        padding: 3px;
+    }
+    /* style.css */
+
+/* High-level muted text for dark themes */
+.text-muted {
+    color: rgba(255, 255, 255, 0.5) !important; /* Soft light-gray */
+    font-weight: 300;
+}
+
+/* Optional: if you want a slightly more 'gold' muted tone to match the brand */
+.text-muted-gold {
+    color: rgba(212, 175, 55, 0.6) !important;
+}
+/* style.css */
+
+/* Custom black background for sections */
+.bg-black {
+    background-color: #050505 !important;
+}
+
+/* Luxury hover effect for the expert profile */
+.team-member {
+    transition: all 0.4s ease;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.team-member:hover {
+    background: rgba(255, 255, 255, 0.03);
+    transform: translateY(-5px);
+}
+
+.team-member img {
+    transition: all 0.4s ease;
+    filter: grayscale(20%);
+}
+
+.team-member:hover img {
+    filter: grayscale(0%);
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+}
+/* style.css */
+
+/* Ensures all standard text and paragraphs in the About sections are white */
+.about-section, 
+.about-section p, 
+.about-section span,
+.text-muted {
+    color: rgba(255, 255, 255, 0.9) !important;
+}
+
+/* Specific fix for the "Our Legacy" lead text in the header */
+.header-content p.lead {
+    color: #ffffff !important;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+/* Styling for the "Driven by Perfection" and "Meet the Expert" headers */
+h2, h3, h5 {
+    color: #ffffff !important;
+}
+
+/* Ensuring the "The Royale Promise" card list items are white */
+.card .list-unstyled li span {
+    color: #ffffff !important;
+}
+/* Full Screen Background Slider */
+.hero-slider {
+    position: fixed; /* Makes it sit behind everything */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -1; /* Pushes it to the background */
+}
+
+.carousel-item, .full-screen-bg {
+    height: 100vh;
+    width: 100%;
+}
+
+.full-screen-bg {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* This creates the "Moving" effect */
+    animation: zoomEffect 20s infinite alternate;
+}
+
+/* The Zoom/Move Effect */
+@keyframes zoomEffect {
+    from { transform: scale(1) translateX(0); }
+    to { transform: scale(1.1) translateX(-20px); }
+}
+
+/* Dark overlay to make text pop against moving images */
+.overlay-gradient {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.8) 100%);
+}
+
+.hero-content {
+    z-index: 10;
+    text-shadow: 0 4px 15px rgba(0,0,0,1);
+}
+
+/* Ensure the rest of your page content has a margin to see the background */
+.main-content-area {
+    margin-top: 100vh; /* Pushes content down so the background is visible first */
+    background: var(--dark-bg);
+    position: relative;
+    z-index: 5;
+}
+/* style.css */
+
+/* Fix the slider to the background */
+.hero-slider {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -1; /* Sits behind the main-content-area */
+}
+
+.carousel-item, .full-screen-bg {
+    height: 100vh;
+    width: 100%;
+}
+
+.full-screen-bg {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* This creates the movement effect */
+    animation: luxuryZoom 20s infinite alternate ease-in-out;
+}
+
+@keyframes luxuryZoom {
+    from { transform: scale(1); }
+    to { transform: scale(1.1); }
+}
+
+/* Add a dark gradient so the car image doesn't make text unreadable */
+.overlay-gradient {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.8) 100%);
+}
+
+/* Push the body content down so we see the full car background first */
+.main-content-area {
+    margin-top: 100vh;
+    background-color: var(--dark-bg); /* Use your custom #050505 color */
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 -20px 50px rgba(0,0,0,0.9); /* Smooth transition from image to black background */
+}
+input[type="date"].form-control {
+    color: #ffffff !important;
+    background-color: #151515 !important;
+    border: 1px solid #333 !important;
+}
+
+/* Fix for the calendar icon (Chrome/Safari/Edge) */
+input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(1); /* Turns the black icon into white */
+    cursor: pointer;
+}
+
+/* Ensures the text is white when the input is focused */
+input[type="date"].form-control:focus {
+    color: #ffffff !important;
+    border-color: var(--gold) !important;
+}
